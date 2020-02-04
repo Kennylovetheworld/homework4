@@ -70,9 +70,8 @@ border around all elements in focus.*/
   /* See documentation for mobile view */
   display: grid;
   grid-template-columns: 100px 400px 100px;
-  grid-template-rows: 30px auto auto auto auto auto 100px;
+  grid-template-rows: 30px repeat(5, auto) 100px;
   row-gap: 15px;
-  width: 100vw;
 }
 
 footer{
@@ -171,10 +170,12 @@ header p{
 }
 
 @media all and (min-width: 800px){
-
   .container{
-  /*Your code here */
-  /* See documentation for desktop view */ 
+    /*Your code here  */
+    /* See documentation for mobile view */
+    display: grid;
+    grid-template-columns: 50px auto 500px auto 50px;
+    grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
   }
 
   nav{
@@ -187,11 +188,13 @@ header p{
   .about, .clients, .method-image, .contact-image{
   /*Your code here */
   /* See documentation for desktop view */ 
+    grid-column: 3 / span 2;
   }
 
   .about-image, .clients-image, .method, .contact{
     /*Your code here */
     /* See documentation for desktop view */ 
+    grid-column: 2 / span 2;
     }
 
 
